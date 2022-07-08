@@ -43,6 +43,6 @@ galleryEl.addEventListener("click", e => {
 			return;
 		}
 		instance.close();
-		galleryEl.removeEventListener("keydown", onKeyUp);
+		galleryEl.removeEventListener("keydown", onKeyEsc);
 	}
 });
