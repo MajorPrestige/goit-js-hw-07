@@ -36,9 +36,9 @@ galleryEl.addEventListener("click", e => {
 
 	instance.show();
 
-	galleryEl.addEventListener("keydown", onKeyUp);
+	galleryEl.addEventListener("keydown", onKeyEsc);
 
-	function onKeyUp(e) {
+	function onKeyEsc(e) {
 		if (e.code !== "Escape") {
 			return;
 		}
