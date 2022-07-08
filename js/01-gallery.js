@@ -8,7 +8,7 @@ const galleryEl = document.querySelector(".gallery");
 const galleryArray = galleryItems
 	.map(({ preview, original, description }) => {
 		return `
-  <div class="gallery__item">
+  <li class="gallery__item">
     <a class="gallery__link" href="${original}">
       <img
         class="gallery__image"
@@ -17,7 +17,7 @@ const galleryArray = galleryItems
         alt="${description}"
       />
     </a>
-  </div>
+  </li>
   `;
 	})
 	.join("");
@@ -42,6 +42,7 @@ galleryEl.addEventListener("click", e => {
 		if (e.code !== "Escape") {
 			return;
 		}
+
 		instance.close();
 		galleryEl.removeEventListener("keydown", onKeyEsc);
 	}

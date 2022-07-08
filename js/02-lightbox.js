@@ -6,9 +6,11 @@ const galleryEl = document.querySelector(".gallery");
 const galleryArray = galleryItems
 	.map(({ preview, original, description }) => {
 		return `
-  <a class="gallery__item" href="${original}">
-    <img class="gallery__image" src="${preview}" alt="${description}" />
-  </a>
+  <li class="gallery__item">
+    <a href="${original}">
+      <img class="gallery__image" src="${preview}" alt="${description}" />
+    </a>
+  </li>
   `;
 	})
 	.join("");
